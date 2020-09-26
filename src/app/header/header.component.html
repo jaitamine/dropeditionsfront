@@ -1,0 +1,26 @@
+<!-- taken from : "https://bootsnipp.com/snippets/o1kVM" -->
+<nav>
+    <div id="logo">Bourse</div>
+  
+    <label for="drop" class="toggle">Menu</label>
+    <input type="checkbox" id="drop" />
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a  href="/researcherProfile">Section1</a></li>
+            
+            
+           
+            <li><a *ngIf="userService.isConnected" href="/researcherProfile">Section2</a></li>
+         
+            
+            <li><a class="btn" (click)="contact()">Section3</a></li>
+            <li><a class="btn" (click)="contact()">Section4</a></li>
+            <li><a class="btn" *ngIf="!userService.isConnected" (click)="openDialog()">Login</a></li>
+            <li><a class="btn" *ngIf="userService.isConnected"  (click)= "onLogout()">Logout</a></li>
+            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+        </ul>
+       
+    </nav>
+  
+
+    

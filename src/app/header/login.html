@@ -1,0 +1,13 @@
+<div class = "container">
+	<div class="wrapper">
+		<form #f="ngForm" (ngSubmit)="onLogin(f.value)" name="Login_Form" class="form-signin">       
+			  <hr class="colorgraph"><br>
+			  
+			  <input [(ngModel)]="email" type="text" class="form-control" name="email" placeholder="Email" required="" autofocus="" />
+			  <input [(ngModel)]="password" type="password" class="form-control" name="password" placeholder="Password" required="" autofocus=""/>     		  	 
+        <button (click)="closeDialog()" class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button> 
+        <a (click)="signup()" mat-button mat-dialog-close>Vous n'avez pas du compte?</a>	 			
+    </form>		
+  
+	</div>
+</div>	

@@ -1,0 +1,20 @@
+<div class="alert alert-danger" *ngIf="mode==0 && errorMessage">
+    <strong>{{errorMessage}}</strong>
+    </div>
+<div class = "container">
+	<div class="wrapper">
+		<form name="Login_Form" class="form-signin" #f="ngForm" (ngSubmit)="onRegister(f.value)">       
+              <hr class="colorgraph"><br>
+
+                         
+              <input type="text" name="email" [(ngModel)]="email" class="form-control" placeholder="Email" required="" autofocus="" />
+
+              <input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Password" required=""/>   
+			  <input type="password" name="repassword" [(ngModel)]="repassword" class="form-control" placeholder="Confirmer votre password" required=""/>   		  
+     
+        <button class="btn btn-lg btn-primary btn-block"  name="Submit" [disabled]="!f.valid" type="Submit">Inscrivez-vous</button> 
+      			
+    </form>		
+  
+	</div>
+</div>
